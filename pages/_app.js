@@ -1,7 +1,8 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  // console.log("Hey there, looking for something? Feel free to shoot me a message :)");
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
