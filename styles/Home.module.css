@@ -1,4 +1,31 @@
-.content {
-  padding: 0 20px;
-  line-height: 3rem;
+.intro {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: baseline;
+  justify-content: left;
+  max-width: 500px;
+}
+
+.intro > * {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: xx-large;
+  font-weight: 400;
+}
+
+.subtitle {
+  font-size: larger;
+  font-weight: 300;
+}
+
+.icons {
+  margin: 10px 0;
+  display: flex;
+}
+
+.icon {
+  margin: 0 11px;
 }
