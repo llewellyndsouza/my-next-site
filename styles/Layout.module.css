@@ -4,4 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* colour theme - light */
+  background: linear-gradient(165deg, #47fffc99, #6bff8a99, #ceff8f99);
+  color: #222222;
+}
+
+.dark {
+  /* colour theme - light */
+  background: linear-gradient(165deg, #013b3a, #182b1cf5, #212916);
+  color: #cccccc;
 }
