@@ -2,12 +2,12 @@ import Layout from '../components/layout';
 import styles from '../styles/Home.module.css';
 import { motion } from 'framer-motion';
 import { useContext, useState } from 'react';
-import { ThemeContext } from './_app';
+import { ThemeContext } from '../components/context/theme';
 
 const spring = {
   type: 'spring',
   stiffness: 700,
-  damping: 30
+  damping: 30,
 };
 
 export default function Home() {

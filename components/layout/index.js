@@ -4,7 +4,7 @@ import styles from '../../styles/Layout.module.css';
 // import Header from './header';
 import { motion } from 'framer-motion';
 import { useContext, useState } from 'react';
-import { ThemeContext } from '../../pages/_app';
+import { ThemeContext } from '../context/theme';
 
 export default function Layout({ children, title }) {
   const theme = useContext(ThemeContext);
