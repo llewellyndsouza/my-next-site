@@ -6,8 +6,11 @@ export const ThemeContext = createContext({
 });
 
 const ThemeWrapper = ({ children }) => {
-  const [dark, setDark] = useState(false);
-  const values = { dark, setDark };
+  const [dark, setDark] = useState(true);
+  const toggleTheme = () => {
+    setDark(!dark);
+  };
+  const values = { isThemeDark: dark, toggleTheme };
 
   return <ThemeContext.Provider value={values}>{children}</ThemeContext.Provider>;
 };

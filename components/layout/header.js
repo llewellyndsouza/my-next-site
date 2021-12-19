@@ -1,16 +1,27 @@
-import styles from "../../styles/Header.module.css";
-import { motion } from "framer-motion";
+import styles from '../../styles/Header.module.css';
+import { motion } from 'framer-motion';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/theme';
+
+const spring = {
+  type: 'spring',
+  stiffness: 700,
+  damping: 30,
+};
 
 export default function Header() {
+  const { isThemeDark, toggleTheme } = useContext(ThemeContext);
+
   return (
     <header>
-      <div className={styles.leftHeader}>
-        <motion.div initial={{ y: -100 }} animate={{ y: 0 }} transition={{type:"spring", damping: 9}}>
-          {"Llewellyn D'souza"}
-        </motion.div>
-        <hr />
+      {/* Theme Selector Switch - Starts */}
+      <div className={styles.themeSelector}>
+        <div className={`${styles.themeSwitch} ${isThemeDark ? styles.darkSelected : ''}`} onClick={toggleTheme}>
+          <motion.div className={`${styles.themeHandle} ${isThemeDark ? styles.darkSelected : ''}`} layout transition={spring} />
+        </div>
+        <div className={styles.themeSelectorText}>{isThemeDark ? 'Too bright?' : 'Too dark?'}</div>
       </div>
-      {/* <div className={styles.rightHeader}>{" "}</div> */}
+      {/* Theme Selector Switch - Ends */}
     </header>
   );
 }
